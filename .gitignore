@@ -7,5 +7,14 @@ output/*/
 # Include sample project for reference
 !output/sample-and-usage-guide/
 
+# Node.js
+node_modules/
+
 # Claude Code local settings (personal permissions & env)
 .claude/settings.local.json
+
+# Build artifacts
+*.html
+
+# Private themes (not shipped with OSS)
+.claude/skills/slide/themes/yuni/
