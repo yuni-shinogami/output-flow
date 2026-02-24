@@ -13,10 +13,10 @@ argument-hint: "<project-name>"
 `$ARGUMENTS` 未指定なら案内して終了。
 まず以下を読み込む:
 - `output/$ARGUMENTS/slide/slides.md`
-- `docs/style-guide.md`
-- `docs/patterns.md`
+- `.claude/skills/slide/themes/starter/docs/style-guide.md`
+- `.claude/skills/slide/themes/starter/docs/patterns.md`
 
-slides.md が不在なら `/slide-draft` を案内。docs/ が不在なら「デザインシステムが未構築」と案内。
+slides.md が不在なら `/slide-draft` を案内。`.claude/skills/slide/themes/starter/docs/` が不在なら「デザインシステムが未構築」と案内。
 
 ## 処理フロー
 
@@ -26,12 +26,12 @@ slides.md を読み込み、以下を分析してユーザーに提示:
 - 総スライド数
 - `_class:` が付与されているスライド数 / 未付与数
 - 使用されているパターン一覧
-- frontmatter のテーマ設定（`theme: custom-theme` かどうか）
+- frontmatter のテーマ設定（`theme: starter-theme` かどうか）
 - TailwindCSS scriptタグの有無
 
 ### ステップ2: パターン選定提案
 
-`_class:` が未付与のスライドについて、`docs/patterns.md` のカタログから最適なパターンを提案する。
+`_class:` が未付与のスライドについて、`.claude/skills/slide/themes/starter/docs/patterns.md` のカタログから最適なパターンを提案する。
 
 各スライドの提案を表形式で提示:
 
@@ -44,10 +44,10 @@ slides.md を読み込み、以下を分析してユーザーに提示:
 
 ユーザーの承認後、以下を一括適用:
 
-1. **frontmatter更新**: `theme: custom-theme`, `paginate: false`, `size: 16:9`
+1. **frontmatter更新**: `theme: starter-theme`, `paginate: false`, `size: 16:9`
 2. **TailwindCSS boilerplate追加**（未存在の場合）:
    ```html
-   <script src="../../theme/js/tailwindcss.js"></script>
+   <script src="../../../.claude/skills/slide/js/tailwindcss.js"></script>
    <script>
    tailwind.config = {
      corePlugins: { preflight: false },
@@ -63,8 +63,8 @@ slides.md を読み込み、以下を分析してユーザーに提示:
 適用後の slides.md を保存し、変更サマリをユーザーに提示。
 
 ビルド・プレビューを案内:
-- `./scripts/build.sh output/$ARGUMENTS/slide/slides.md` でHTML出力
-- `./scripts/preview.sh output/$ARGUMENTS/slide/slides.md` でプレビュー
+- `./.claude/skills/slide/scripts/build.sh output/$ARGUMENTS/slide/slides.md` でHTML出力
+- `./.claude/skills/slide/scripts/preview.sh output/$ARGUMENTS/slide/slides.md` でプレビュー
 
 ## 注意事項
 

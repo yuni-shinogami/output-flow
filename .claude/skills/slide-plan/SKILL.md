@@ -18,7 +18,7 @@ argument-hint: "<project-name>"
 アウトラインの内容（特に各章の時間配分）を踏まえて、以下を聞く:
 
 1. **最終出力形式** — Marpのみで完結（カスタムテーマ使用） / Canvaで仕上げ / その他
-   - Marpのみの場合: カスタムテーマ（`theme/custom-theme.css`）を使用。`docs/patterns.md` のパターンカタログ参照
+   - Marpのみの場合: カスタムテーマ（`.claude/skills/slide/themes/starter/starter-theme.css`）を使用。`.claude/skills/slide/themes/starter/docs/patterns.md` のパターンカタログ参照
    - Canva仕上げの場合: Canvaテンプレートファイルの有無・パスを確認
 2. **ビジュアル方針** — テキスト中心 / ビジュアル重視 / バランス型
 3. **スライド密度** — 1トピック1スライド / コンパクトにまとめる
@@ -49,7 +49,7 @@ slide-plan.mdには以下を含める:
 - クロージング後の構成（おまけ/宣伝/なし）
 - 制約事項
 
-パターン選定では `docs/patterns.md` のカタログを参照し、各スライドに最適なレイアウトパターン（`_class:`）を割り当てる。
+パターン選定では `.claude/skills/slide/themes/starter/docs/patterns.md` のカタログを参照し、各スライドに最適なレイアウトパターン（`_class:`）を割り当てる。
 
 保存後、整理した内容をユーザーに提示し「この方針でPhase 1を完了してよいか？」と確認する。
 

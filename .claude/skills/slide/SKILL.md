@@ -23,6 +23,12 @@ Phase 1(plan) → Phase 2(draft) → Phase 2.3(visual, optional) → Phase 2.5(s
 - `$ARGUMENTS` あり → そのまま使う
 - `$ARGUMENTS` なし → `ls output/` で一覧表示し、既存から選択をユーザーに確認
 
+### 1.5. テーマ確認
+
+`marp.config.mjs` を読み込み、使用テーマを確認する。デフォルトは `starter-theme`（`.claude/skills/slide/themes/starter/`）。
+
+テーマをカスタマイズしたい場合は `/slide-theme` を案内する（既存スライド分析・カラーカスタマイズ・CSSインポートに対応）。
+
 ### 2. 状態判定と自動起動
 
 `output/<project>/` 内のファイル存在で次フェーズを判定し、Skillツールで起動する:

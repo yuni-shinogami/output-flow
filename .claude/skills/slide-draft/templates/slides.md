@@ -1,18 +1,18 @@
 ---
 marp: true
-theme: custom-theme
+theme: starter-theme
 paginate: false
 size: 16:9
 ---
 
 <!--
-  デザインシステム: theme/custom-theme.css + TailwindCSS
-  ビルド: ./scripts/build.sh output/$ARGUMENTS/slide/slides.md
-  プレビュー: ./scripts/preview.sh output/$ARGUMENTS/slide/slides.md
+  デザインシステム: .claude/skills/slide/themes/starter/starter-theme.css + TailwindCSS
+  ビルド: ./.claude/skills/slide/scripts/build.sh output/$ARGUMENTS/slide/slides.md
+  プレビュー: ./.claude/skills/slide/scripts/preview.sh output/$ARGUMENTS/slide/slides.md
   画像ディレクトリ: output/$ARGUMENTS/slide/images/ （外部SVG/画像はここに配置）
 -->
 
-<script src="../../theme/js/tailwindcss.js"></script>
+<script src="../../../.claude/skills/slide/js/tailwindcss.js"></script>
 <script>
 tailwind.config = {
   corePlugins: { preflight: false },

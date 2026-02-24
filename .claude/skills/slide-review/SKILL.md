@@ -30,7 +30,7 @@ goal.md、slide-plan.md、slides.mdの内容を読み取り、以下5つのサ�
 3. **独自価値の表現（最重要）** — 経験が活きているか、一般論スライドになっていないか
    - Canva仕上げの場合: ビジュアルで強調すべき独自体験の箇所を明示
 4. **プレゼンの流れ** — テンポ、時間配分、聴衆の集中力、起承転結
-5. **デザインシステム準拠** — `docs/style-guide.md` と `docs/patterns.md` を読み込んでチェック
+5. **デザインシステム準拠** — `.claude/skills/slide/themes/starter/docs/style-guide.md` と `.claude/skills/slide/themes/starter/docs/patterns.md` を読み込んでチェック
    - 定型構造の遵守: slide-plan.mdの構成パターン（問題解決型/体験談型/PREP型）に合った流れになっているか
    - ブリッジスライドの効果: セクション転換にブリッジスライドが適切に配置されているか。ブリッジのメッセージが1行で簡潔か
    - 段階的ビルドアップの活用: 複雑な概念や図解に段階的な情報開示が使われているか。ビルドアップが冗長になりすぎていないか
@@ -63,7 +63,7 @@ goal.md、slide-plan.md、slides.mdの内容を読み取り、以下5つのサ�
 
 レビューの改善を反映した後、スクリーンショットでビジュアル確認を行う。
 
-1. `./scripts/take-screenshots.sh output/$ARGUMENTS/slide/slides.md output/$ARGUMENTS/slide/screenshots/` でPNG生成
+1. `./.claude/skills/slide/scripts/take-screenshots.sh output/$ARGUMENTS/slide/slides.md output/$ARGUMENTS/slide/screenshots/` でPNG生成
 2. 生成されたPNG画像をClaude Visionで全スライド確認（5枚ずつバッチで読み込む）
 3. 以下をチェック:
    - テキストのはみ出し・切れ（特にemphasis-detail、content+SVGのスライド）
@@ -79,7 +79,7 @@ goal.md、slide-plan.md、slides.mdの内容を読み取り、以下5つのサ�
 
 ビジュアル検証が完了したら、発表用PDFをプロジェクト内に生成する:
 ```bash
-./scripts/export-pdf.sh output/$ARGUMENTS/slide/slides.md output/$ARGUMENTS/slide/
+./.claude/skills/slide/scripts/export-pdf.sh output/$ARGUMENTS/slide/slides.md output/$ARGUMENTS/slide/
 ```
 生成先: `output/$ARGUMENTS/slide/slides.pdf`
 

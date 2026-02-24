@@ -15,8 +15,8 @@ argument-hint: "<project-name>"
 - `output/$ARGUMENTS/slide/slides.md`
 - `output/$ARGUMENTS/slide/slide-plan.md`
 - `output/$ARGUMENTS/outline/goal.md`
-- `docs/svg-guide.md`（SVG生成ガイド）
-- `docs/patterns.md`（画像レイアウトクラスのセクション）
+- `.claude/skills/slide/themes/starter/docs/svg-guide.md`（SVG生成ガイド）
+- `.claude/skills/slide/themes/starter/docs/patterns.md`（画像レイアウトクラスのセクション）
 
 いずれか不在なら該当フェーズを案内。
 
@@ -47,7 +47,7 @@ argument-hint: "<project-name>"
 ### 3. SVG生成と配置
 
 承認された提案ごとに:
-1. `docs/svg-guide.md` のカラーパレット・viewBox・品質ルールに従ってSVGを生成
+1. `.claude/skills/slide/themes/starter/docs/svg-guide.md` のカラーパレット・viewBox・品質ルールに従ってSVGを生成
 2. 20行以下 → `slides.md` にインライン配置、20行超 → `output/$ARGUMENTS/slide/images/` に外部ファイル保存
 3. 画像レイアウトクラス（`img-text-right`, `img-full` 等）を使って `slides.md` 内に配置
 4. 1つ生成するごとにユーザーに確認（まとめて全部ではなく段階的に）
@@ -56,7 +56,7 @@ argument-hint: "<project-name>"
 
 すべてのSVG配置が完了したら:
 - 変更サマリを提示（追加したSVGの一覧）
-- スクリーンショットでのビジュアル検証を案内（`./scripts/take-screenshots.sh`）
+- スクリーンショットでのビジュアル検証を案内（`./.claude/skills/slide/scripts/take-screenshots.sh`）
 
 ## 制約
 
