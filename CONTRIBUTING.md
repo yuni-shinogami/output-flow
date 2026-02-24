@@ -4,12 +4,21 @@ output-flow への貢献に興味を持っていただきありがとうござ�
 
 ## 開発の始め方
 
+1. GitHub 上でこのリポジトリを **Fork** する
+2. Fork した自分のリポジトリを clone する
+
 ```bash
-git clone https://github.com/yuni-shinogami/output-flow.git
+git clone https://github.com/<your-username>/output-flow.git
 cd output-flow
 ```
 
-Claude Code を起動して、スキルが動作することを確認してください。
+3. upstream を設定する（本家の変更を取り込むため）
+
+```bash
+git remote add upstream https://github.com/yuni-shinogami/output-flow.git
+```
+
+4. Claude Code を起動して、スキルが動作することを確認する
 
 ## ブランチ戦略
 
@@ -39,18 +48,28 @@ main（常に動く状態）
 
 ## Pull Request の出し方
 
-1. ブランチを作成する
+1. main を最新にする
+
+```bash
+git fetch upstream
+git checkout main
+git merge upstream/main
+```
+
+2. ブランチを作成する
 
 ```bash
 git checkout -b feat/your-feature
 ```
 
-2. 変更をコミットする
-3. Push して PR を作成する
+3. 変更をコミットする
+4. **自分の Fork に** Push して PR を作成する
 
 ```bash
 git push -u origin feat/your-feature
 ```
+
+5. GitHub 上で本家リポジトリへの PR を作成する
 
 ### PR に含めてほしい情報
 
