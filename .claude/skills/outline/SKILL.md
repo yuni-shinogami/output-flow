@@ -19,11 +19,11 @@ Phase 1(context) → Phase 2(goal) → Phase 3(draft) → Phase 4(refine)
 ### 1. プロジェクト名の確定
 
 - `$ARGUMENTS` あり → そのまま使う
-- `$ARGUMENTS` なし → `ls work/` で一覧表示し、既存から選択 or 新規作成をユーザーに確認
+- `$ARGUMENTS` なし → `ls output/` で一覧表示し、既存から選択 or 新規作成をユーザーに確認
 
 ### 2. 状態判定と自動起動
 
-`work/<project>/` 内のファイル存在で次フェーズを判定し、Skillツールで起動する：
+`output/<project>/` 内のファイル存在で次フェーズを判定し、Skillツールで起動する：
 
 | context.md | goal.md | outline.md | 起動するスキル |
 |:----------:|:-------:|:----------:|:--------------:|

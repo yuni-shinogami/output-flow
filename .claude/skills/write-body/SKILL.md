@@ -12,10 +12,10 @@ argument-hint: "<project-name>"
 
 `$ARGUMENTS` 未指定なら案内して終了。
 まず以下を読み込む:
-- `work/$ARGUMENTS/context.md`
-- `work/$ARGUMENTS/goal.md`
-- `work/$ARGUMENTS/outline.md`
-- `work/$ARGUMENTS/write-plan.md`
+- `output/$ARGUMENTS/context.md`
+- `output/$ARGUMENTS/goal.md`
+- `output/$ARGUMENTS/outline.md`
+- `output/$ARGUMENTS/write-plan.md`
 
 いずれか不在なら該当フェーズを案内。
 
@@ -43,7 +43,7 @@ write-plan.mdの構成対応表をもとに、記事全体の見出し構成を�
 
 ### ステップ4: 保存
 
-完成した下書きを `work/$ARGUMENTS/draft.md` に保存する。フォーマットは [templates/draft.md](templates/draft.md) を参照。
+完成した下書きを `output/$ARGUMENTS/draft.md` に保存する。フォーマットは [templates/draft.md](templates/draft.md) を参照。
 
 ユーザーに全体を提示し「この下書きでPhase 2を完了してよいか？」と確認する。
 

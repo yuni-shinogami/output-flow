@@ -21,11 +21,11 @@ Phase 1(prepare) → Phase 2(body) → Phase 3(review)
 ### 1. プロジェクト名の確定
 
 - `$ARGUMENTS` あり → そのまま使う
-- `$ARGUMENTS` なし → `ls work/` で一覧表示し、既存から選択をユーザーに確認
+- `$ARGUMENTS` なし → `ls output/` で一覧表示し、既存から選択をユーザーに確認
 
 ### 2. 状態判定と自動起動
 
-`work/<project>/` 内のファイル存在で次フェーズを判定し、Skillツールで起動する:
+`output/<project>/` 内のファイル存在で次フェーズを判定し、Skillツールで起動する:
 
 | outline.md | write-plan.md | draft.md | 起動するスキル |
 |:----------:|:-------------:|:--------:|:--------------:|

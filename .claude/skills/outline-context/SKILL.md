@@ -11,7 +11,7 @@ argument-hint: "<project-name>"
 プロジェクト: **$ARGUMENTS**
 
 `$ARGUMENTS` 未指定なら案内して終了。
-`work/$ARGUMENTS/` が未作成なら作成する。
+`output/$ARGUMENTS/` が未作成なら作成する。
 
 ## ユーザーに聞くこと
 
@@ -24,7 +24,7 @@ argument-hint: "<project-name>"
 
 ## 回答後の処理
 
-回答を整理し `work/$ARGUMENTS/context.md` に保存する。フォーマットは [templates/context.md](templates/context.md) を参照。
+回答を整理し `output/$ARGUMENTS/context.md` に保存する。フォーマットは [templates/context.md](templates/context.md) を参照。
 
 保存後、整理した内容をユーザーに提示し「この内容でPhase 1を完了してよいか？」と確認する。
 

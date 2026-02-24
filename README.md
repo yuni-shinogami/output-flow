@@ -92,7 +92,7 @@ cd output-flow
 output-flow/
 ├── .claude/skills/      # スキル定義（ワークフローのロジック）
 ├── design.md            # 設計書
-└── work/                # 作業ディレクトリ
+└── output/              # 成果物ディレクトリ
     └── <プロジェクト名>/
         ├── context.md       # コンテキスト
         ├── goal.md          # ゴール

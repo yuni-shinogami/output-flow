@@ -11,7 +11,7 @@ argument-hint: "<project-name>"
 プロジェクト: **$ARGUMENTS**
 
 `$ARGUMENTS` 未指定なら案内して終了。
-まず `work/$ARGUMENTS/context.md`、`work/$ARGUMENTS/goal.md`、`work/$ARGUMENTS/outline.md` を読み込む。いずれか不在なら該当フェーズを案内。
+まず `output/$ARGUMENTS/context.md`、`output/$ARGUMENTS/goal.md`、`output/$ARGUMENTS/outline.md` を読み込む。いずれか不在なら該当フェーズを案内。
 
 ## ユーザーに聞くこと
 
@@ -23,7 +23,7 @@ argument-hint: "<project-name>"
 
 ## 回答後の処理
 
-回答とアウトラインの内容を統合し、`work/$ARGUMENTS/write-plan.md` に保存する。フォーマットは [templates/write-plan.md](templates/write-plan.md) を参照。
+回答とアウトラインの内容を統合し、`output/$ARGUMENTS/write-plan.md` に保存する。フォーマットは [templates/write-plan.md](templates/write-plan.md) を参照。
 
 write-plan.mdには以下を含める:
 - 文体方針（トーン、人称、語尾）
