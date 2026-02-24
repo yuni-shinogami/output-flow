@@ -4,5 +4,8 @@ output/*/
 # Keep the output directory itself
 !output/.gitkeep
 
+# Include sample project for reference
+!output/sample-and-usage-guide/
+
 # Claude Code local settings (personal permissions & env)
 .claude/settings.local.json

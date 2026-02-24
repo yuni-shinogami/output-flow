@@ -91,7 +91,6 @@ cd output-flow
 ```
 output-flow/
 ├── .claude/skills/      # スキル定義（ワークフローのロジック）
-├── design.md            # 設計書
 └── output/              # 成果物ディレクトリ
     └── <プロジェクト名>/
         ├── outline/         # /outline で生成
@@ -108,7 +107,7 @@ output-flow/
 
 ## Tips
 
-- プロジェクト名は日本語でもOKです（例: `/outline GENkaigi感想ブログ`）
+- プロジェクト名は日本語でもOKです（例: `/outline hogehogeブログ`）
 - `/outline` をプロジェクト名なしで実行すると、既存プロジェクトの一覧から選べます
 - 各フェーズでは必ずユーザーの確認を取ってから次に進むので、安心して使えます
 - レビュー系フェーズ（`/outline-refine`, `/write-review`）は何度でもやり直せます
