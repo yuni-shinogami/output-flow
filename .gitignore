@@ -1,0 +1,8 @@
+# User work files (generated per project)
+work/*/
+
+# Keep the work directory itself
+!work/.gitkeep
+
+# Claude Code local settings (personal permissions & env)
+.claude/settings.local.json
