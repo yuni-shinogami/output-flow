@@ -105,6 +105,10 @@ output-flow/
             └── review-log.md    # レビューログ
 ```
 
+## コントリビュート
+
+[CONTRIBUTING.md](CONTRIBUTING.md) を参照してください。
+
 ## Tips
 
 - プロジェクト名は日本語でもOKです（例: `/outline hogehogeブログ`）
