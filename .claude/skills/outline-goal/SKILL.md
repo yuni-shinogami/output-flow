@@ -11,7 +11,7 @@ argument-hint: "<project-name>"
 プロジェクト: **$ARGUMENTS**
 
 `$ARGUMENTS` 未指定なら案内して終了。
-まず `output/$ARGUMENTS/context.md` を読み込む。存在しなければ先にPhase 1を案内。
+まず `output/$ARGUMENTS/outline/context.md` を読み込む。存在しなければ先にPhase 1を案内。
 
 ## ユーザーに聞くこと
 
@@ -28,7 +28,7 @@ argument-hint: "<project-name>"
 
 ## 回答後の処理
 
-回答を整理し `output/$ARGUMENTS/goal.md` に保存する。フォーマットは [templates/goal.md](templates/goal.md) を参照。
+回答を整理し `output/$ARGUMENTS/outline/goal.md` に保存する。フォーマットは [templates/goal.md](templates/goal.md) を参照。
 
 コンテキストとの整合性も簡潔に記載する。
 

@@ -23,7 +23,7 @@ Phase 1(context) → Phase 2(goal) → Phase 3(draft) → Phase 4(refine)
 
 ### 2. 状態判定と自動起動
 
-`output/<project>/` 内のファイル存在で次フェーズを判定し、Skillツールで起動する：
+`output/<project>/outline/` 内のファイル存在で次フェーズを判定し、Skillツールで起動する：
 
 | context.md | goal.md | outline.md | 起動するスキル |
 |:----------:|:-------:|:----------:|:--------------:|

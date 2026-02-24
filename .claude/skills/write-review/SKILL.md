@@ -12,9 +12,9 @@ argument-hint: "<project-name>"
 
 `$ARGUMENTS` 未指定なら案内して終了。
 まず以下を読み込む:
-- `output/$ARGUMENTS/goal.md`
-- `output/$ARGUMENTS/write-plan.md`
-- `output/$ARGUMENTS/draft.md`
+- `output/$ARGUMENTS/outline/goal.md`
+- `output/$ARGUMENTS/write/write-plan.md`
+- `output/$ARGUMENTS/write/draft.md`
 
 いずれか不在なら該当フェーズを案内。
 
@@ -45,11 +45,11 @@ goal.md、write-plan.md、draft.mdの内容を読み取り、以下4つのサブ
 
 ## D. 最終版の保存
 
-改善結果を反映して `output/$ARGUMENTS/article.md` に保存する。フォーマットは [templates/article.md](templates/article.md) を参照。
+改善結果を反映して `output/$ARGUMENTS/write/article.md` に保存する。フォーマットは [templates/article.md](templates/article.md) を参照。
 
 **重要: `article.md` にはレビューサマリやメタ情報を含めない。全選択→コピペでそのまま公開できる、公開本文のみのファイルにする。**
 
-レビューサマリ（修正点・文体・独自価値のログ）は `output/$ARGUMENTS/review-log.md` に保存する。フォーマットは [templates/review-log.md](templates/review-log.md) を参照。
+レビューサマリ（修正点・文体・独自価値のログ）は `output/$ARGUMENTS/write/review-log.md` に保存する。フォーマットは [templates/review-log.md](templates/review-log.md) を参照。
 
 ## 完了条件
 

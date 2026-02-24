@@ -27,8 +27,8 @@ Phase 1(prepare) → Phase 2(body) → Phase 3(review)
 
 `output/<project>/` 内のファイル存在で次フェーズを判定し、Skillツールで起動する:
 
-| outline.md | write-plan.md | draft.md | 起動するスキル |
-|:----------:|:-------------:|:--------:|:--------------:|
+| outline/outline.md | write/write-plan.md | write/draft.md | 起動するスキル |
+|:------------------:|:-------------------:|:--------------:|:--------------:|
 | なし | - | - | outlineワークフローを案内（`/outline`） |
 | あり | なし | - | `write-prepare` |
 | あり | あり | なし | `write-body` |

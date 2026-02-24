@@ -94,13 +94,16 @@ output-flow/
 ├── design.md            # 設計書
 └── output/              # 成果物ディレクトリ
     └── <プロジェクト名>/
-        ├── context.md       # コンテキスト
-        ├── goal.md          # ゴール
-        ├── outline.md       # アウトライン
-        ├── write-plan.md    # 執筆プラン
-        ├── draft.md         # 下書き
-        ├── article.md       # 最終版（公開用）
-        └── review-log.md    # レビューログ
+        ├── outline/         # /outline で生成
+        │   ├── context.md       # コンテキスト
+        │   ├── goal.md          # ゴール
+        │   ├── outline.md       # アウトライン
+        │   └── refine-log.md    # レビューログ
+        └── write/           # /write で生成
+            ├── write-plan.md    # 執筆プラン
+            ├── draft.md         # 下書き
+            ├── article.md       # 最終版（公開用）
+            └── review-log.md    # レビューログ
 ```
 
 ## Tips

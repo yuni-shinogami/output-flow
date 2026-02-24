@@ -11,8 +11,8 @@ argument-hint: "<project-name>"
 プロジェクト: **$ARGUMENTS**
 
 `$ARGUMENTS` 未指定なら案内して終了。
-まず `output/$ARGUMENTS/goal.md` と `output/$ARGUMENTS/outline.md` を読み込む。いずれか不在なら該当フェーズを案内。
-`output/$ARGUMENTS/refine-log.md` があれば読み込む（過去のレビュー履歴）。
+まず `output/$ARGUMENTS/outline/goal.md` と `output/$ARGUMENTS/outline/outline.md` を読み込む。いずれか不在なら該当フェーズを案内。
+`output/$ARGUMENTS/outline/refine-log.md` があれば読み込む（過去のレビュー履歴）。
 
 ## A. 並列レビュー
 
@@ -54,8 +54,8 @@ goal.mdとoutline.mdの内容を読み取り、以下4つのサブエージェ�
 
 ## D. 更新・保存
 
-1. 深掘り結果を反映して `output/$ARGUMENTS/outline.md` を更新する。フォーマットは [templates/outline-refined.md](templates/outline-refined.md) を参照。
-2. **`output/$ARGUMENTS/refine-log.md` にレビューラウンドを追記する。** フォーマットは [templates/refine-log.md](templates/refine-log.md) を参照。
+1. 深掘り結果を反映して `output/$ARGUMENTS/outline/outline.md` を更新する。フォーマットは [templates/outline-refined.md](templates/outline-refined.md) を参照。
+2. **`output/$ARGUMENTS/outline/refine-log.md` にレビューラウンドを追記する。** フォーマットは [templates/refine-log.md](templates/refine-log.md) を参照。
    - 新規指摘を一覧に追加（#通番、観点、優先度、箇所、内容、ステータス）
    - 対応した指摘のステータスを「対応済み」に更新
    - 対応内容を具体的に記録
