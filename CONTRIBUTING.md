@@ -101,7 +101,7 @@ write:   prepare → body → review
 
 ### 4. テンプレート
 
-各スキルの `templates/` にあるテンプレートは、出力フォーマットの定義です。テンプレートを変更する場合は、サンプルプロジェクト（`output/sample-and-usage-guide/`）も合わせて更新してください。
+各スキルの `templates/` にあるテンプレートは、出力フォーマットの定義です。テンプレートを変更する場合は、サンプルプロジェクト（`examples/sample-and-usage-guide/`）も合わせて更新してください。
 
 ## 新しいワークフローを追加するには
 

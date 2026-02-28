@@ -91,7 +91,8 @@ cd output-flow
 ```
 output-flow/
 ├── .claude/skills/      # スキル定義（ワークフローのロジック）
-└── output/              # 成果物ディレクトリ
+├── examples/            # サンプルプロジェクト（使い方の参考用）
+└── output/              # 成果物ディレクトリ（.gitignore で除外）
     └── <プロジェクト名>/
         ├── outline/         # /outline で生成
         │   ├── context.md       # コンテキスト
@@ -104,6 +105,39 @@ output-flow/
             ├── article.md       # 最終版（公開用）
             └── review-log.md    # レビューログ
 ```
+
+## 原稿を Git で管理する
+
+`output/` はこのリポジトリの `.gitignore` で除外されているため、書いた原稿はそのままでは Git 管理されません。原稿もバージョン管理したい場合は、**プライベートリポジトリを別に作って `output/` を管理する**方法がおすすめです。
+
+### 手順
+
+1. GitHub でプライベートリポジトリを作成する
+
+```bash
+gh repo create output-flow_my-output --private
+```
+
+2. `output/` ディレクトリで Git を初期化し、リモートを接続する
+
+```bash
+cd output
+git init
+git branch -m main
+git remote add origin git@github.com:<your-username>/output-flow_my-output.git
+```
+
+3. 原稿をコミットしてプッシュする
+
+```bash
+git add .
+git commit -m "add: 原稿を追加"
+git push -u origin main
+```
+
+以降は `output/` 内で通常の Git ワークフロー（`git add` → `git commit` → `git push`）が使えます。
+
+> **Note:** `output/` は親リポジトリ（output-flow）とは完全に独立した Git リポジトリになります。親リポジトリの操作（`git status` や `git push`）が原稿に影響することはありません。
 
 ## コントリビュート
 

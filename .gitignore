@@ -1,11 +1,5 @@
-# User output files (generated per project)
+# User output files (managed in a separate private repository)
 output/*/
-
-# Keep the output directory itself
-!output/.gitkeep
-
-# Include sample project for reference
-!output/sample-and-usage-guide/
 
 # Node.js
 node_modules/
