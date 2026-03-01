@@ -1,6 +1,6 @@
 ---
 name: write-review
-description: 4つの観点（ゴール整合性・読みやすさ・独自価値・構成）で下書きを並列レビューし推敲する。何度でも繰り返し実行可能。「推敲」「レビュー」「write-review」で起動。
+description: 5つの観点（ゴール整合性・読みやすさ・独自価値・構成・LLM表現）で下書きを並列レビューし推敲する。何度でも繰り返し実行可能。「推敲」「レビュー」「write-review」で起動。
 user-invocable: true
 allowed-tools: Read, Write, Bash, Task
 argument-hint: "<project-name>"
@@ -20,7 +20,7 @@ argument-hint: "<project-name>"
 
 ## A. 並列レビュー
 
-goal.md、write-plan.md、draft.mdの内容を読み取り、以下4つのサブエージェントを**1つのメッセージで同時に**Taskツール(subagent_type: general-purpose)で起動する。
+goal.md、write-plan.md、draft.mdの内容を読み取り、以下5つのサブエージェントを**1つのメッセージで同時に**Taskツール(subagent_type: general-purpose)で起動する。
 
 各プロンプトのテンプレートは [review-prompts.md](review-prompts.md) を参照。実際の内容をテンプレートに埋め込んで渡す。
 
@@ -28,10 +28,11 @@ goal.md、write-plan.md、draft.mdの内容を読み取り、以下4つのサブ
 2. **読みやすさ・文体の一貫性** — トーンのブレ、冗長な箇所、リズム
 3. **独自価値の表現（最重要）** — 経験が活きているか、一般論に埋もれていないか
 4. **構成・流れ** — 読者が離脱しそうな箇所、テンポ、つなぎの自然さ
+5. **LLM表現パターン** — LLM特有の定型表現が残っていないか
 
 ## B. 結果統合
 
-4つの結果が揃ったら:
+5つの結果が揃ったら:
 1. 観点ごとに整理してユーザーに提示
 2. 指摘に優先度（高/中/低）をつける
 3. **独自価値の指摘を最優先**で対応
@@ -57,6 +58,7 @@ goal.md、write-plan.md、draft.mdの内容を読み取り、以下4つのサブ
 - [ ] 文体が一貫している
 - [ ] 独自の経験・体験が活きている
 - [ ] 読者が最後まで読みたくなる流れ
+- [ ] LLMっぽい表現が排除されている
 - [ ] ユーザーが「これで公開できる」と感じている
 
 改善余地があれば再度 `/write-review $ARGUMENTS` を案内。
