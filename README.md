@@ -121,13 +121,15 @@ output-flow/
         │   ├── context.md       # コンテキスト
         │   ├── goal.md          # ゴール
         │   ├── outline.md       # アウトライン
-        │   └── refine-log.md    # レビューログ
+        │   ├── refine-log.md    # レビューログ
+        │   └── input-log.md     # ユーザー入力ログ（ドリフト検出用）
         └── write/           # /write で生成
             ├── write-plan.md    # 執筆プラン
             ├── draft.md         # 下書き
             ├── article.md       # 最終版（公開用）
             ├── review-log.md    # レビューログ
-            └── humanize-log.md  # LLM表現チェックログ
+            ├── humanize-log.md  # LLM表現チェックログ
+            └── input-log.md     # ユーザー入力ログ（ドリフト検出用）
 ```
 
 ## 原稿を Git で管理する

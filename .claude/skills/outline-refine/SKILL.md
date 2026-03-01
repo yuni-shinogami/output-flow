@@ -13,6 +13,7 @@ argument-hint: "<project-name>"
 `$ARGUMENTS` 未指定なら案内して終了。
 まず `output/$ARGUMENTS/outline/goal.md` と `output/$ARGUMENTS/outline/outline.md` を読み込む。いずれか不在なら該当フェーズを案内。
 `output/$ARGUMENTS/outline/refine-log.md` があれば読み込む（過去のレビュー履歴）。
+`output/$ARGUMENTS/outline/input-log.md` があれば読み込む（ユーザーの元の発言記録）。
 
 ## A. 並列レビュー
 

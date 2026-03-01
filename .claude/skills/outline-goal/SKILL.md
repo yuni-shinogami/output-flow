@@ -28,6 +28,14 @@ argument-hint: "<project-name>"
 
 ## 回答後の処理
 
+### 入力ログの保存
+
+ユーザーの回答を受け取ったら、**構造化する前に**、発言をそのまま
+`output/$ARGUMENTS/outline/input-log.md` の Phase 2 セクションに追記する。
+ファイル未存在ならテンプレート（[templates/input-log.md](../outline-context/templates/input-log.md)）に従い新規作成。引用記法で原文のまま記録。
+
+### goal.md の保存
+
 回答を整理し `output/$ARGUMENTS/outline/goal.md` に保存する。フォーマットは [templates/goal.md](templates/goal.md) を参照。
 
 コンテキストとの整合性も簡潔に記載する。

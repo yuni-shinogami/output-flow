@@ -31,6 +31,18 @@ argument-hint: "<project-name>"
 
 ## 回答後の処理
 
+### 入力ログの保存
+
+ユーザーの回答を受け取ったら、**構造化する前に**、発言をそのまま
+`output/$ARGUMENTS/outline/input-log.md` に記録する。
+
+- ファイル未存在: テンプレート（[templates/input-log.md](templates/input-log.md)）に従い新規作成、Phase 1 セクションに記録
+- ファイル存在（やり直し）: Phase 1 セクションを上書き
+- 引用記法（`>`）で原文のまま記録。要約・整形・補完をしない
+- 複数ターンの場合は空行で区切り順に記録
+
+### context.md の保存
+
 回答を整理し `output/$ARGUMENTS/outline/context.md` に保存する。フォーマットは [templates/context.md](templates/context.md) を参照。
 
 保存後、整理した内容をユーザーに提示し「この内容でPhase 1を完了してよいか？」と確認する。
