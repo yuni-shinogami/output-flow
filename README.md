@@ -9,6 +9,9 @@ LT・技術記事・書籍などのアウトプット作成を、Claude Codeと�
                       └→ LTスライド作成（未実装）
                       └→ 書籍執筆（未実装）
                       └→ ...
+
+/humanize（LLM表現チェック）── 任意のテキストに対して単独実行可能
+                              └→ /write-review にも5つ目の観点として組み込み済み
 ```
 
 まず `/outline` でアウトプットの骨格（アウトライン）を作ります。これがすべての土台です。
@@ -84,6 +87,9 @@ cd output-flow
 /write-prepare プロジェクト名     # 執筆準備
 /write-body プロジェクト名        # 本文執筆
 /write-review プロジェクト名      # 推敲（繰り返し可）
+
+# ワークフロー横断ツール
+/humanize ファイルパス             # LLM表現パターンの検出・修正
 ```
 
 ## ファイル構成
@@ -103,7 +109,8 @@ output-flow/
             ├── write-plan.md    # 執筆プラン
             ├── draft.md         # 下書き
             ├── article.md       # 最終版（公開用）
-            └── review-log.md    # レビューログ
+            ├── review-log.md    # レビューログ
+            └── humanize-log.md  # LLM表現チェックログ
 ```
 
 ## 原稿を Git で管理する
