@@ -23,6 +23,15 @@ argument-hint: "<project-name>"
 
 ## 回答後の処理
 
+### 入力ログの保存
+
+ユーザーの回答を受け取ったら、**構造化する前に**、発言をそのまま
+`output/$ARGUMENTS/write/input-log.md` に記録する。
+テンプレート（[templates/input-log.md](templates/input-log.md)）に従い新規作成（やり直し時は上書き）。
+引用記法で原文のまま記録。
+
+### write-plan.md の保存
+
 回答とアウトラインの内容を統合し、`output/$ARGUMENTS/write/write-plan.md` に保存する。フォーマットは [templates/write-plan.md](templates/write-plan.md) を参照。
 
 write-plan.mdには以下を含める:
