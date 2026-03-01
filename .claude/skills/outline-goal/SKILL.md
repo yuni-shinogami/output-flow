@@ -8,6 +8,8 @@ argument-hint: "<project-name>"
 
 # Phase 2: ゴール設定
 
+**重要: `$ARGUMENTS` にプロジェクト名が含まれる場合、CLAUDE.mdの命名規則に従いディレクトリを解決すること。**
+
 プロジェクト: **$ARGUMENTS**
 
 `$ARGUMENTS` 未指定なら案内して終了。

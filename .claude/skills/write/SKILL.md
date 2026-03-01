@@ -20,8 +20,12 @@ Phase 1(prepare) → Phase 2(body) → Phase 3(review)
 
 ### 1. プロジェクト名の確定
 
-- `$ARGUMENTS` あり → そのまま使う
+CLAUDE.mdの命名規則に従い `$ARGUMENTS` を解決する。
+
+- `$ARGUMENTS` あり → CLAUDE.mdの解決アルゴリズムでディレクトリを特定
 - `$ARGUMENTS` なし → `ls output/` で一覧表示し、既存から選択をユーザーに確認
+
+**重要: 解決後のフルディレクトリ名（例: `20260301-01_吉祥寺.pm39登壇`）を子スキルに `$ARGUMENTS` として渡すこと。**
 
 ### 2. 状態判定と自動起動
 

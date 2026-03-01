@@ -8,10 +8,12 @@ argument-hint: "<project-name>"
 
 # Phase 1: コンテキスト設定
 
+**重要: `$ARGUMENTS` にプロジェクト名が含まれる場合、CLAUDE.mdの命名規則に従いディレクトリを解決すること。**
+
 プロジェクト: **$ARGUMENTS**
 
 `$ARGUMENTS` 未指定なら案内して終了。
-`output/$ARGUMENTS/outline/` が未作成なら作成する。
+`output/$ARGUMENTS/outline/` が未作成なら作成する。新規プロジェクトの場合はディレクトリ名を `YYYYMMDD-NN_タイトル` 形式で自動生成する（CLAUDE.mdの命名規則に従う）。
 
 ## ネタ帳の引き継ぎ
 
