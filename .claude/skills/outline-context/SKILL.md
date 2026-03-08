@@ -1,6 +1,6 @@
 ---
 name: outline-context
-description: アウトラインのコンテキスト（発表の場・聴衆・制約）を対話形式で設定しcontext.mdに保存する。完了後に自動でoutline-goalを起動する。
+description: アウトラインのコンテキスト（発表の場・聴衆・制約）を対話形式で設定しcontext.mdに保存する。完了後に進め方（ゴール先行/素材先行）を確認して次フェーズを起動する。
 user-invocable: true
 allowed-tools: Read, Write, Bash, Skill
 argument-hint: "<project-name>"
@@ -51,4 +51,9 @@ argument-hint: "<project-name>"
 
 **重要: ユーザーが明示的に同意するまで次フェーズに進んではならない。追加・修正の要望があれば反映してから再度確認する。**
 
-同意が得られたら「Phase 1 完了」と伝え、Skillツールで `outline-goal` を引数 `$ARGUMENTS` で起動する。
+同意が得られたら「Phase 1 完了」と伝え、ユーザーに次の進め方を確認する：
+
+- **A. ゴールを先に決める**: 受け手に期待する変化やメッセージを先に固めてから構成を作る。伝えたいことが明確なときに向いている。
+  → Skillツールで `outline-goal` を引数 `$ARGUMENTS` で起動
+- **B. 素材から先に考える**: 話したい素材やエピソードを先に出して、整理しながらゴールを見つける。まだ何を言いたいか固まっていないときに向いている。
+  → Skillツールで `outline-draft` を引数 `$ARGUMENTS` で起動
