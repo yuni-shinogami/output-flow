@@ -1,0 +1,590 @@
+/* @theme starter-theme */
+@import 'default';
+
+/* ============================================
+   テーマカラー定義
+   ============================================ */
+:root {
+  --color-orange: #F5A623;
+  --color-orange-dark: #F09819;
+  --color-orange-light: #F7CE68;
+
+  --color-bg-gradient: linear-gradient(135deg, #F09819 0%, #F7CE68 100%);
+  --color-white: #ffffff;
+  --color-black: #333333;
+  --color-gray: #e0e0e0;
+}
+
+section {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  color: var(--color-black);
+  padding: 60px 80px;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+/* ============================================
+   cover: カバースライド（グラデーション中央テキスト）
+   ============================================ */
+section.cover {
+  background: var(--color-bg-gradient);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+section.cover h1 {
+  font-size: 3em;
+  font-weight: 900;
+  color: var(--color-white);
+  margin: 0;
+}
+section.cover h2 {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: var(--color-white);
+  margin-top: 20px;
+}
+section.cover header,
+section.cover footer {
+  display: none;
+}
+
+/* ============================================
+   title: タイトルスライド
+   （ヘッダーバー + グリッド背景 + 大文字 + フッターバー）
+   ============================================ */
+section.title {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    repeating-linear-gradient(
+      0deg, transparent, transparent 49px,
+      var(--color-gray) 49px, var(--color-gray) 50px),
+    repeating-linear-gradient(
+      90deg, transparent, transparent 49px,
+      var(--color-gray) 49px, var(--color-gray) 50px);
+  background-color: var(--color-white);
+}
+section.title header {
+  display: block;
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-size: 1.4em;
+  font-weight: 700;
+  font-style: italic;
+  padding: 14px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  position: static;
+  top: auto;
+}
+section.title footer {
+  display: block;
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-size: 1em;
+  font-weight: 700;
+  padding: 14px 0;
+  text-align: center;
+  width: 100%;
+  position: static;
+  bottom: auto;
+}
+section.title h1 {
+  font-size: 4em;
+  font-weight: 900;
+  color: var(--color-orange);
+  -webkit-text-stroke: 2px var(--color-orange-dark);
+  margin: 0 80px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+section.title p {
+  margin: 0 80px 20px;
+  font-size: 1.2em;
+  color: var(--color-black);
+}
+
+/* ============================================
+   section-box: セクション区切り
+   （グラデーション + 白枠ボックス + サブテキスト）
+   ============================================ */
+section.section-box {
+  background: var(--color-bg-gradient);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 120px;
+}
+section.section-box h1 {
+  font-size: 2.8em;
+  font-weight: 900;
+  color: var(--color-white);
+  border: 4px solid var(--color-white);
+  border-radius: 12px;
+  padding: 40px 80px;
+  margin: 0;
+}
+section.section-box p {
+  font-size: 1.2em;
+  color: var(--color-white);
+  margin-top: 24px;
+}
+section.section-box header,
+section.section-box footer {
+  display: none;
+}
+
+/* ============================================
+   section-line: セクション区切り
+   （グラデーション + アンダーライン）
+   ============================================ */
+section.section-line {
+  background: var(--color-bg-gradient);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+section.section-line h1 {
+  font-size: 2.8em;
+  font-weight: 900;
+  color: var(--color-white);
+  margin: 0;
+  padding-bottom: 16px;
+  border-bottom: 4px solid var(--color-white);
+}
+section.section-line header,
+section.section-line footer {
+  display: none;
+}
+
+/* ============================================
+   bridge: ブリッジスライド
+   （グラデーション + 白太字 + 1メッセージ）
+   セクション転換や感情的インパクト用
+   ============================================ */
+section.bridge {
+  background: var(--color-bg-gradient);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 80px;
+}
+section.bridge h1 {
+  font-size: 2.8em;
+  font-weight: 900;
+  color: var(--color-white);
+  margin: 0;
+  line-height: 1.4;
+}
+section.bridge header,
+section.bridge footer {
+  display: none;
+}
+
+/* ============================================
+   共通: コンテンツ系スライドのヘッダーバー
+   （オレンジ帯 + 白文字）
+   ============================================ */
+section.content header,
+section.content-tree header,
+section.emphasis header,
+section.emphasis-detail header,
+section.conclusion-bullets header {
+  display: block;
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 10px 30px;
+  position: static;
+  top: auto;
+  width: fit-content;
+  margin: -60px -80px 40px;
+  padding-right: 40px;
+}
+section.content footer,
+section.content-tree footer,
+section.emphasis footer,
+section.emphasis-detail footer,
+section.conclusion-bullets footer {
+  display: none;
+}
+
+/* ============================================
+   content: コンテンツスライド（箇条書き）
+   ============================================ */
+section.content h2 {
+  font-size: 1.6em;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-black);
+  margin: 0 0 24px 0;
+}
+section.content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+section.content ul li {
+  font-size: 1.3em;
+  padding: 12px 0 12px 40px;
+  position: relative;
+  line-height: 1.4;
+}
+section.content ul li::before {
+  content: "\25B6";
+  color: var(--color-orange);
+  font-size: 0.8em;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ============================================
+   content-tree: コンテンツスライド（ツリー構造）
+   ============================================ */
+section.content-tree h2 {
+  font-size: 1.6em;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-black);
+  margin: 0 0 24px 0;
+}
+section.content-tree ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+section.content-tree > div > ul > li {
+  font-size: 1.3em;
+  font-weight: 700;
+  padding: 8px 0 8px 40px;
+  position: relative;
+}
+section.content-tree > div > ul > li::before {
+  content: "\25B6";
+  color: var(--color-orange);
+  font-size: 0.8em;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.content-tree ul ul {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 3px solid var(--color-gray);
+}
+section.content-tree ul ul li {
+  font-size: 0.85em;
+  font-weight: 400;
+  padding: 6px 0;
+}
+
+/* ============================================
+   emphasis: 強調スライド（大太文字のみ）
+   ============================================ */
+section.emphasis {
+  display: flex;
+  flex-direction: column;
+}
+section.emphasis h1 {
+  font-size: 3.2em;
+  font-weight: 900;
+  color: var(--color-black);
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================
+   emphasis-detail: 強調 + 箇条書き + まとめ
+   ============================================ */
+section.emphasis-detail h1 {
+  font-size: 2.4em;
+  font-weight: 900;
+  color: var(--color-black);
+  margin: 0 0 20px 0;
+}
+section.emphasis-detail p {
+  font-size: 1.1em;
+  margin: 0 0 8px 0;
+}
+section.emphasis-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+section.emphasis-detail ul li {
+  font-size: 1.1em;
+  padding: 8px 0 8px 40px;
+  position: relative;
+}
+section.emphasis-detail ul li::before {
+  content: "\25B6";
+  color: var(--color-orange);
+  font-size: 0.8em;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.emphasis-detail blockquote {
+  border-left: none;
+  font-size: 1.1em;
+  color: var(--color-black);
+  padding: 0;
+  margin: 0;
+}
+
+/* ============================================
+   conclusion-bullets: 箇条書き + 結論主張
+   ============================================ */
+section.conclusion-bullets ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+section.conclusion-bullets ul li {
+  font-size: 1.3em;
+  padding: 12px 0 12px 40px;
+  position: relative;
+}
+section.conclusion-bullets ul li::before {
+  content: "\25B6";
+  color: var(--color-orange);
+  font-size: 0.8em;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.conclusion-bullets h1 {
+  font-size: 2.6em;
+  font-weight: 900;
+  color: var(--color-black);
+  margin: 0;
+  text-align: center;
+}
+
+/* ============================================
+   result: 結果スライド
+   （グラデーション + fieldset/legend風の白枠ボックス）
+   h2がボーダー上のlegendラベル、h1が白枠ボックス本体
+   h2の負マージンでh1の上辺に重ね、background で枠を切り欠く
+   ============================================ */
+section.result {
+  background: var(--color-bg-gradient);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 80px;
+}
+section.result header,
+section.result footer {
+  display: none;
+}
+/* h2: ボーダー上に重なるlegendラベル */
+section.result h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-white);
+  background: var(--color-orange-dark);
+  width: fit-content;
+  align-self: flex-start;
+  padding: 0 12px;
+  margin: 0 0 -0.65em 30px;
+  position: relative;
+  z-index: 1;
+}
+/* hr: legendデザインでは不要なので非表示 */
+section.result hr {
+  display: none;
+}
+/* h1: 白枠ボックス本体（メインテキスト中央配置） */
+section.result h1 {
+  font-size: 2.8em;
+  font-weight: 900;
+  color: var(--color-white);
+  border: 3px solid var(--color-white);
+  border-radius: 12px;
+  padding: 60px;
+  margin: 0;
+  text-align: center;
+}
+
+/* ============================================
+   summary: まとめスライド（グラデーション + 番号リスト）
+   ============================================ */
+section.summary {
+  background: var(--color-bg-gradient);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 100px;
+}
+section.summary header,
+section.summary footer {
+  display: none;
+}
+section.summary h1 {
+  font-size: 3em;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--color-white);
+  margin: 0 0 10px 0;
+}
+section.summary h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: var(--color-white);
+  width: 80%;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-white);
+  margin: 0 0 0 0;
+}
+section.summary ol {
+  border: 4px solid var(--color-white);
+  border-radius: 12px;
+  padding: 40px 40px 40px 80px;
+  width: 80%;
+  box-sizing: border-box;
+  margin: 0;
+  color: var(--color-white);
+}
+section.summary ol li {
+  font-size: 1.3em;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+/* ============================================
+   self-intro: 自己紹介スライド（左右分割）
+   ============================================ */
+section.self-intro {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  padding: 0;
+  gap: 0;
+}
+section.self-intro header,
+section.self-intro footer {
+  display: none;
+}
+section.self-intro .profile-left {
+  background: var(--color-orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: var(--color-white);
+}
+section.self-intro .profile-left img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid var(--color-white);
+  object-fit: cover;
+}
+section.self-intro .profile-name {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 16px;
+}
+section.self-intro .profile-name-en {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+section.self-intro .profile-right {
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.self-intro .profile-right h2 {
+  font-size: 1.5em;
+  color: var(--color-black);
+  border-bottom: 3px solid var(--color-orange);
+  padding-bottom: 8px;
+  margin: 0 0 24px 0;
+}
+section.self-intro .profile-right h3 {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--color-black);
+  margin: 0 0 12px 0;
+}
+section.self-intro .profile-right h4 {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--color-black);
+  margin: 20px 0 8px 0;
+}
+section.self-intro .profile-right p {
+  font-size: 0.95em;
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+/* ============================================
+   コンテンツ溢れ防止
+   各パターンのセクションで内容がスライド外に
+   はみ出さないよう overflow を制御する
+   ============================================ */
+section[class*="content"],
+section[class*="emphasis"],
+section.summary,
+section.conclusion-bullets {
+  overflow: hidden;
+}
+
+/* ============================================
+   画像レイアウトユーティリティ
+   既存パターン内で使う <div> レベルのクラス
+   ============================================ */
+
+/* テキスト左 + 画像右 */
+.img-text-right { display: flex; align-items: center; gap: 40px; }
+.img-text-right img, .img-text-right svg { flex-shrink: 0; max-width: 45%; max-height: 420px; order: 2; }
+.img-text-right > :not(img):not(svg) { order: 1; min-width: 0; }
+
+/* 画像左 + テキスト右 */
+.img-text-left { display: flex; align-items: center; gap: 40px; }
+.img-text-left img, .img-text-left svg { flex-shrink: 0; max-width: 45%; max-height: 420px; }
+.img-text-left > :not(img):not(svg) { min-width: 0; }
+
+/* 画像中央 + キャプション */
+.img-center { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.img-center img, .img-center svg { max-width: 80%; max-height: 400px; }
+.img-center .caption { font-size: 0.9em; color: var(--color-black); text-align: center; }
+
+/* 全幅ダイアグラム */
+.img-full { display: flex; justify-content: center; margin: 20px 0; }
+.img-full img, .img-full svg { max-width: 100%; max-height: 480px; }
+
+/* 画像グリッド（2-3枚横並び） */
+.img-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; justify-items: center; }
+.img-grid img, .img-grid svg { max-width: 100%; max-height: 300px; }

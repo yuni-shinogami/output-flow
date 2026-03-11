@@ -1,0 +1,15 @@
+{
+  "name": "output-flow",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Claude Code skills collection for creating outlines, articles, and slides through AI dialogue",
+  "scripts": {
+    "slide:build": ".claude/skills/slide/scripts/build.sh",
+    "slide:preview": ".claude/skills/slide/scripts/preview.sh",
+    "slide:screenshots": ".claude/skills/slide/scripts/take-screenshots.sh",
+    "slide:pdf": ".claude/skills/slide/scripts/export-pdf.sh"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3"
+  }
+}
