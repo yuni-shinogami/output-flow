@@ -11,7 +11,9 @@ argument-hint: "<project-name>"
 ## フロー
 
 ```
-Phase 1(context) → Phase 2(goal) → Phase 3(draft) → Phase 4(refine)
+                    ┌─ A. ゴール先行: Phase 2(goal) → Phase 3(draft) ─┐
+Phase 1(context) →─┤                                                   ├→ Phase 4(refine)
+                    └─ B. 素材先行:   Phase 3(draft + goal発見) ───────┘
 ```
 
 ## 処理
@@ -32,8 +34,17 @@ CLAUDE.mdの命名規則に従い `$ARGUMENTS` を解決する。
 | context.md | goal.md | outline.md | 起動するスキル |
 |:----------:|:-------:|:----------:|:--------------:|
 | なし | - | - | `outline-context` |
-| あり | なし | - | `outline-goal` |
+| あり | なし | なし | **ユーザーに進め方を確認**（下記参照） |
 | あり | あり | なし | `outline-draft` |
 | あり | あり | あり | `outline-refine` |
 
 状態をユーザーに伝えてからスキルを起動する。
+
+#### 進め方の確認（context.md あり・goal.md なし・outline.md なし）
+
+ユーザーに以下の2つの進め方を提示し、選んでもらう：
+
+- **A. ゴールを先に決める**（従来フロー）: 受け手に期待する変化やメッセージを先に固めてから構成を作る。伝えたいことが明確なときに向いている。
+  → `outline-goal` を起動
+- **B. 素材から先に考える**（素材先行フロー）: 話したい素材やエピソードを先に出して、整理しながらゴールを見つける。まだ何を言いたいか固まっていないときに向いている。
+  → `outline-draft` を引数 `$ARGUMENTS` で起動（goal.md なしで起動すると素材先行モードになる）
