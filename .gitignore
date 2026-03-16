@@ -4,6 +4,9 @@ output/*/
 # Node.js
 node_modules/
 
+# Node.js
+node_modules/
+
 # Claude Code local settings (personal permissions & env)
 .claude/settings.local.json
 
