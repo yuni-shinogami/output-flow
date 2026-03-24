@@ -13,15 +13,16 @@ argument-hint: "<project-name>"
 プロジェクト: **$ARGUMENTS**
 
 `$ARGUMENTS` 未指定なら案内して終了。
-まず `output/$ARGUMENTS/outline/context.md`、`output/$ARGUMENTS/outline/goal.md`、`output/$ARGUMENTS/outline/outline.md` を読み込む。いずれか不在なら該当フェーズを案内。
+まず `output/$ARGUMENTS/outline/goal.md`、`output/$ARGUMENTS/outline/outline.md` を読み込む。いずれか不在なら該当フェーズを案内。
 
 ## ユーザーに聞くこと
 
 アウトラインの内容を踏まえて、以下を聞く（まとめて回答でも1つずつでもOK）:
 
-1. **文体・トーン** — カジュアル/フォーマル、一人称の表記（私/僕/自分など）、語尾のスタイル（です・ます/だ・である/口語体）
-2. **参考スタイル**（任意） — 参考にしたい記事のURLやスタイルの説明
-3. **特別な制約**（任意） — 文字数目安、フォーマット要件（見出しレベル、画像挿入箇所など）
+1. **想定読者** — この記事を誰に向けて書くか（技術レベル、関心、属性など）
+2. **文体・トーン** — カジュアル/フォーマル、一人称の表記（私/僕/自分など）、語尾のスタイル（です・ます/だ・である/口語体）
+3. **参考スタイル**（任意） — 参考にしたい記事のURLやスタイルの説明
+4. **特別な制約**（任意） — 文字数目安、フォーマット要件（見出しレベル、画像挿入箇所など）
 
 ## 回答後の処理
 
@@ -37,6 +38,7 @@ argument-hint: "<project-name>"
 回答とアウトラインの内容を統合し、`output/$ARGUMENTS/write/write-plan.md` に保存する。フォーマットは [templates/write-plan.md](templates/write-plan.md) を参照。
 
 write-plan.mdには以下を含める:
+- 想定読者（属性、関心）
 - 文体方針（トーン、人称、語尾）
 - アウトラインの各章→記事セクションの対応表
 - 執筆上の注意点（独自価値を活かすポイント、避けるべきこと）

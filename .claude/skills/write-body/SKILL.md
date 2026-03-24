@@ -14,7 +14,6 @@ argument-hint: "<project-name>"
 
 `$ARGUMENTS` 未指定なら案内して終了。
 まず以下を読み込む:
-- `output/$ARGUMENTS/outline/context.md`
 - `output/$ARGUMENTS/outline/goal.md`
 - `output/$ARGUMENTS/outline/outline.md`
 - `output/$ARGUMENTS/write/write-plan.md`

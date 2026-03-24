@@ -13,11 +13,18 @@ argument-hint: "<project-name>"
 プロジェクト: **$ARGUMENTS**
 
 `$ARGUMENTS` 未指定なら案内して終了。
-まず `output/$ARGUMENTS/outline/context.md` を読み込む。存在しなければ先にPhase 1を案内。
+`output/$ARGUMENTS/outline/` が未作成なら作成する。新規プロジェクトの場合はディレクトリ名を `YYYYMMDD-NN_タイトル` 形式で自動生成する（CLAUDE.mdの命名規則に従う）。
+
+## ネタ帳の引き継ぎ
+
+`output/$ARGUMENTS/idea.md` が存在する場合、内容を読み込みユーザーに提示する：
+「このプロジェクトにはネタ帳の記録があります。ゴール設定の参考にします。」
+
+ネタ帳の内容は質問の初期値や補足情報として活用するが、ユーザーの回答を優先する。
 
 ## ユーザーに聞くこと
 
-コンテキストを踏まえて、以下を聞く：
+以下を聞く：
 
 1. **受け手に期待する行動/変化** — 何かを始める？考え方を変える？行動を変える？
 2. **語りのスタンス** — 以下のどれに近いか：
@@ -34,13 +41,11 @@ argument-hint: "<project-name>"
 
 ユーザーの回答を受け取ったら、**構造化する前に**、発言をそのまま
 `output/$ARGUMENTS/outline/input-log.md` の Phase 2 セクションに追記する。
-ファイル未存在ならテンプレート（[templates/input-log.md](../outline-context/templates/input-log.md)）に従い新規作成。引用記法で原文のまま記録。
+ファイル未存在ならテンプレート（[templates/input-log.md](../outline-draft/templates/input-log.md)）に従い新規作成。引用記法で原文のまま記録。
 
 ### goal.md の保存
 
 回答を整理し `output/$ARGUMENTS/outline/goal.md` に保存する。フォーマットは [templates/goal.md](templates/goal.md) を参照。
-
-コンテキストとの整合性も簡潔に記載する。
 
 保存後、整理した内容をユーザーに提示し「この内容でPhase 2を完了してよいか？」と確認する。
 
