@@ -11,9 +11,9 @@ argument-hint: "<project-name>"
 ## フロー
 
 ```
-                    ┌─ A. ゴール先行: Phase 2(goal) → Phase 3(draft) ─┐
-Phase 1(context) →─┤                                                   ├→ Phase 4(refine)
-                    └─ B. 素材先行:   Phase 3(draft + goal発見) ───────┘
+                    ┌─ A. ゴール先行: Phase 1(goal) → Phase 2(draft) ─┐
+エントリ ──────────┤                                                   ├→ Phase 3(refine)
+                    └─ B. 素材先行:   Phase 2(draft + goal発見) ───────┘
 ```
 
 ## 処理
@@ -31,16 +31,15 @@ CLAUDE.mdの命名規則に従い `$ARGUMENTS` を解決する。
 
 `output/<project>/outline/` 内のファイル存在で次フェーズを判定し、Skillツールで起動する：
 
-| context.md | goal.md | outline.md | 起動するスキル |
-|:----------:|:-------:|:----------:|:--------------:|
-| なし | - | - | `outline-context` |
-| あり | なし | なし | **ユーザーに進め方を確認**（下記参照） |
-| あり | あり | なし | `outline-draft` |
-| あり | あり | あり | `outline-refine` |
+| goal.md | outline.md | 起動するスキル |
+|:-------:|:----------:|:--------------:|
+| なし | なし | **ユーザーに進め方を確認**（下記参照） |
+| あり | なし | `outline-draft` |
+| あり | あり | `outline-refine` |
 
 状態をユーザーに伝えてからスキルを起動する。
 
-#### 進め方の確認（context.md あり・goal.md なし・outline.md なし）
+#### 進め方の確認（goal.md なし・outline.md なし）
 
 ユーザーに以下の2つの進め方を提示し、選んでもらう：
 

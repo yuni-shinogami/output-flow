@@ -1,8 +1,8 @@
 # [記事タイトル]
 
 ## メタ情報
-- コンテキスト: [context.mdから要約]
 - ゴール: [goal.mdから要約]
+- 想定読者: [write-plan.mdから要約]
 - 文体: [write-plan.mdから要約]
 
 ---

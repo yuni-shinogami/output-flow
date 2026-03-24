@@ -19,7 +19,6 @@ argument-hint: "<project-name>"
 以下を読み込む:
 - `output/$ARGUMENTS/outline/outline.md`（アウトライン）
 - `output/$ARGUMENTS/outline/goal.md`（ゴール）
-- `output/$ARGUMENTS/outline/context.md`（コンテキスト）
 - `output/$ARGUMENTS/talk/talk-note.md`（既存の壁打ちメモがあれば）
 
 outline.md が不在なら `/outline` を案内。
